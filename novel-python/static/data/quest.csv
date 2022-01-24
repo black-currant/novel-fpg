@@ -1,0 +1,6 @@
+﻿Task ID,Task State,Task Type,Locale; Title; Description,Param,Virtual Currency,Locale; Action Name,Note
+task.bind.phone,unpublished,newbie,; 绑定手机; 绑定手机即可领取奖励; tc; 綁定手機; 綁定手機即可領取獎勵,,10,; 去绑定; tc; 去綁定,新手任务，无效状态
+task.bind.wechat,published,newbie,; 绑定微信; 绑定微信即可领取奖励; tc; 綁定微信; 綁定微信即可領取獎勵,,10,; 去绑定; tc; 去綁定,新手任务
+task.daily.share,published,daily,; 每日分享; 每日首次分享，被好友点击后即可领取奖励; tc; 每日分享; 每日首次分享，被好友點擊後即可領取獎勵,,10,; 去分享; tc; 去分享,每日任务
+task.sign.in,published,loop,; 签到; 连续第{0}天签到; tc; 簽到; 連續第{0}天簽到,1|2|3|4|5|6|7,10|20|30|40|50|60|70,; 去签到; tc; 去簽到,
+task.read.duration,published,weekly,; 阅读{0}分钟; 完成{0}分钟阅读时长后，奖励将自动发放; tc; 閱讀{0}分鐘; 完成{0}分鐘閱讀時長後，獎勵將自動發放,13|30|90|180|360|600,10|20|30|40|50|60,; 去阅读; tc; 去閱讀,阅读任务，以周计算阅读时长，下一周清零
