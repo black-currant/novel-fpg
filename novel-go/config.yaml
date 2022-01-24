@@ -1,0 +1,29 @@
+jwt:
+  key: Q77c-x86qI2I9en-rwhYBWHhd575Z25ft-UGQeSqJa0=
+  expire-time: 604800
+mysql:
+  path: 43.154.39.199
+  port: 3306
+  config: charset=utf8mb4&parseTime=True&loc=Local
+  db-name: novel
+  username: novel
+  password: ZrA9w#Rwuw
+  max-idle-conns: 10
+  max-open-conns: 100
+  log-mode: ""
+  log-zap: false
+elastic:
+  url: http://elastic:paizitech@43.154.39.199:9200/
+redis:
+  url: 43.154.39.199:6379
+  password: 123456
+  db: 0
+zap:
+  level: debug
+  format: console
+  prefix: '[novel-go]'
+  director: log
+  show-line: true
+  encode-level: LowercaseColorLevelEncoder
+  stacktrace-key: stacktrace
+  log-in-console: true
