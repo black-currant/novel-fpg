@@ -2,6 +2,8 @@
 
 小说客户端，基于 Flutter 实现。
 
+- [Android 安装包](https://github.com/black-currant/novel-fpg/blob/main/novel_flutter/app-release.apk)
+
 # 安装和配置 Flutter 开发环境
 
 下面步骤是在 macOS 操作系统进行的，其他操作系统请看：
