@@ -1,17 +1,17 @@
-# novel_flutter
+# novel-flutter
 
-小说客户端，基于 Flutter 实现。
+## 1、线上体验App
 
-- [Android 安装包](https://github.com/black-currant/novel-fpg/blob/main/novel_flutter/app-release.apk)
+- Android 安装包[下载地址](https://github.com/black-currant/novel-fpg/raw/main/novel-flutter/app-release.apk)
 
-# 安装和配置 Flutter 开发环境
+## 2、安装和配置 Flutter 开发环境
 
-下面步骤是在 macOS 操作系统进行的，其他操作系统请看：
+&ensp;&ensp; 下面步骤是在 macOS 操作系统进行的，其他操作系统请看：
 
 - [在 Windows 操作系统上安装和配置 Flutter 开发环境](https://flutter.cn/docs/get-started/install/windows)
 - [在 Linux 操作系统上安装和配置 Flutter 开发环境](https://flutter.cn/docs/get-started/install/linux)
 
-## 获取 Flutter
+## 3、获取 Flutter
 
 - [下载 Flutter 2.5.3](https://storage.flutter-io.cn/flutter_infra_release/releases/stable/macos/flutter_macos_2.5.3-stable.zip)
 
@@ -32,13 +32,13 @@ export PATH="$PATH":"[Flutter 解压的路径]/flutter/.pub-cache/bin"
 flutter doctor
 ```
 
-## 平台设置
+## 4、平台设置
 
 macOS 支持在 iOS、Android 和 Web 上开发 Flutter 应用（技术预览版）。现在至少完成一个平台设置步骤，以便能够构建和运行您的第一个 Flutter 应用程序。
 
-## iOS 设置
+## 5、iOS 设置
 
-### 安装 Xcode
+&ensp;&ensp;&ensp;安装 Xcode
 
 - 通过 [直接下载](https://developer.apple.com/xcode/) 或者通过 [Mac App Store](https://itunes.apple.com/us/app/xcode/id497799835)来安装最新稳定版 Xcode；
 
@@ -55,15 +55,15 @@ $ sudo xcodebuild -runFirstLaunch
 
 - 配置 iOS 模拟器，终端执行`$ open -a Simulator `。
 
-## 选择 IDE
+## 6、选择 IDE
 
 推荐使用 [vscode](https://code.visualstudio.com/)，下载安装后，在插件市场搜索`flutter`和`dart`，安装插件。
 
-## 参考
+## 7、参考
 
 - [在 macOS 上安装和配置 Flutter 开发环境](https://flutter.cn/docs/get-started/install/macos)
 
-# 感谢
+## 8、鸣谢
 
 - [fun_android_flutter](https://github.com/phoenixsky/fun_android_flutter)提供架构和基础封装
 - [flutter_shuqi](https://github.com/huanxsd/flutter_shuqi)提供阅读器
