@@ -11,13 +11,13 @@
 Android 安装包[下载地址](https://github.com/black-currant/novel-fpg/raw/main/novel-flutter/app-release.apk)
 
 ## 2、效果图
-![截图1](novel-flutter/screenshot/1.jpg)
-![截图2](novel-flutter/screenshot/2.jpg)
-![截图3](novel-flutter/screenshot/3.jpg)
-![截图4](novel-flutter/screenshot/4.jpg)
-![截图5](novel-flutter/screenshot/5.jpg)
-![截图6](novel-flutter/screenshot/6.jpg)
-![截图7](novel-flutter/screenshot/7.jpg)
+![截图1](https://rpa-1253410989.cos.ap-guangzhou.myqcloud.com/screenshot/1.jpg)
+![截图2](https://rpa-1253410989.cos.ap-guangzhou.myqcloud.com/screenshot/2.jpg)
+![截图3](https://rpa-1253410989.cos.ap-guangzhou.myqcloud.com/screenshot/3.jpg)
+![截图4](https://rpa-1253410989.cos.ap-guangzhou.myqcloud.com/screenshot/4.jpg)
+![截图5](https://rpa-1253410989.cos.ap-guangzhou.myqcloud.com/screenshot/5.jpg)
+![截图6](https://rpa-1253410989.cos.ap-guangzhou.myqcloud.com/screenshot/6.jpg)
+![截图7](https://rpa-1253410989.cos.ap-guangzhou.myqcloud.com/screenshot/7.jpg)
 
 ## 3、主要功能
 
@@ -43,11 +43,11 @@ Android 安装包[下载地址](https://github.com/black-currant/novel-fpg/raw/m
 
 | 微信 |
 |  :---:  | 
-| ![微信](novel-flutter/screenshot/qr.jpg)
+| ![微信](https://rpa-1253410989.cos.ap-guangzhou.myqcloud.com/screenshot/qr.jpg)
 
-## 6. 捐赠
+## 6、捐赠
 
 如果你觉得这个项目对你有帮助，你可以请作者喝茶
 | 支付宝 |
 |  :---:  | 
-| ![支付宝](novel-flutter/screenshot/alipay.jpg)
+| ![支付宝](https://rpa-1253410989.cos.ap-guangzhou.myqcloud.com/screenshot/alipay.jpg)
