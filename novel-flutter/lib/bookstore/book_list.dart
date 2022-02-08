@@ -68,7 +68,7 @@ class BookListPage extends StatelessWidget {
             separatorBuilder: (context, index) => spaceDividerMedium,
             padding: pageEdgeInsets,
             itemCount: 9,
-            item: BookSkeletonMedium(),
+            item: const BookSkeletonMedium(),
           );
         } else if (model.isError) {
           return ViewStateErrorWidget(
@@ -81,7 +81,7 @@ class BookListPage extends StatelessWidget {
           header: WaterDropHeader(
             waterDropColor: Theme.of(context).colorScheme.secondary,
           ),
-          footer: RefresherFooter(),
+          footer: const RefresherFooter(),
           enablePullDown: !model.isEmpty,
           onRefresh: model.refresh,
           enablePullUp: !model.isEmpty,

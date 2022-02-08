@@ -8,7 +8,7 @@ import 'view_state.dart';
 class ViewStateBusyWidget extends StatelessWidget {
   final Color? indicatorColor;
 
-  ViewStateBusyWidget({this.indicatorColor});
+  const ViewStateBusyWidget({Key? key, this.indicatorColor}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -218,8 +218,10 @@ class ViewStateButton extends StatelessWidget {
   final Widget? child;
   final String? textData;
 
-  ViewStateButton({required this.onPressed, this.child, this.textData})
-      : assert(child == null || textData == null);
+  const ViewStateButton(
+      {Key? key, required this.onPressed, this.child, this.textData})
+      : assert(child == null || textData == null),
+        super(key: key);
 
   @override
   Widget build(BuildContext context) {

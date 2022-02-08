@@ -34,7 +34,7 @@ class ListShimmer extends StatelessWidget {
     required this.item,
     this.padding,
     required this.separatorBuilder,
-    this.scrollDirection: Axis.vertical,
+    this.scrollDirection = Axis.vertical,
   }) : super(key: key);
 
   @override

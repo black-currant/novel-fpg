@@ -57,7 +57,7 @@ class MyInterceptor extends InterceptorsWrapper {
         DioError(
           requestOptions: response.requestOptions,
           response: response,
-          error: respData,
+          error: respData.message,
         ),
         true,
       );

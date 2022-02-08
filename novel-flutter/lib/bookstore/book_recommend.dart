@@ -85,7 +85,7 @@ class EditorChoiceView extends StatelessWidget {
           return ListShimmer(
             separatorBuilder: (context, index) => spaceDividerMedium,
             itemCount: 6,
-            item: BookSkeletonMedium(),
+            item: const BookSkeletonMedium(),
           );
         } else if (model.isError) {
           return ViewStateErrorWidget(
@@ -146,7 +146,7 @@ class MaybeLikeView extends StatelessWidget {
             separatorBuilder: (context, index) => spaceDividerMedium,
             padding: const EdgeInsets.all(0.0),
             itemCount: 6,
-            item: BookSkeletonMedium(),
+            item: const BookSkeletonMedium(),
           );
         } else if (model.isError) {
           return ViewStateErrorWidget(
@@ -218,7 +218,7 @@ class SameTypeView extends StatelessWidget {
             ),
             padding: const EdgeInsets.all(0.0),
             itemCount: 8,
-            item: BookSkeletonSmall(),
+            item: const BookSkeletonSmall(),
           );
         } else if (model.isError) {
           return ViewStateErrorWidget(

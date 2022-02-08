@@ -30,7 +30,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:oktoast/oktoast.dart';
 import 'package:provider/provider.dart';
-// import 'package:screen/screen.dart';
+import 'package:wakelock/wakelock.dart';
 
 enum PageJumpType { stay, firstPage, lastPage }
 
@@ -101,8 +101,7 @@ class ReaderSceneState extends State<ReaderScene>
     contentWidth =
         ScreenUtil.width - ReaderConfig.leftOffset - ReaderConfig.rightOffset;
 
-    // TODO:
-    // Screen.keepOn(!readerModel.wakelock);
+    Wakelock.toggle(enable: !readerModel.wakelock);
 
     startTimer();
 
@@ -149,8 +148,6 @@ class ReaderSceneState extends State<ReaderScene>
   void didChangeDependencies() {
     debugPrint('$lifeCycleTag didChangeDependencies.');
     super.didChangeDependencies();
-    // TODO:
-    // routeObserver.subscribe(this, ModalRoute.of(context));
   }
 
   @override
@@ -209,11 +206,10 @@ class ReaderSceneState extends State<ReaderScene>
 
     saveRecentRoute('');
 
-    // 如果开启了屏幕常亮，则在退出阅读器时关闭
-    // TODO:
-    // Screen.isKeptOn.then((value) {
-    //   if (value) Screen.keepOn(false);
-    // });
+    // 如果开启了屏幕常亮，在退出阅读器时要关闭
+    if (await Wakelock.enabled) {
+      Wakelock.disable();
+    }
 
     // 设置系统栏可见性
     await SystemChrome.setEnabledSystemUIMode(SystemUiMode.manual, overlays: [

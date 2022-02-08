@@ -1,5 +1,4 @@
 import 'package:novel_flutter/app/colors.dart';
-import 'package:novel_flutter/app/constant.dart';
 import 'package:novel_flutter/app/dimens.dart';
 import 'package:novel_flutter/generated/l10n.dart';
 import 'package:novel_flutter/view_model/locale_model.dart';
@@ -134,5 +133,6 @@ void switchDarkMode(BuildContext context) {
 //    if (MediaQuery.of(context).platformBrightness == Brightness.dark) {
 //      showToast("检测到系统为暗黑模式,已为你自动切换", position: ToastPosition.bottom);
 //    } else {
+//
 //    }
 }

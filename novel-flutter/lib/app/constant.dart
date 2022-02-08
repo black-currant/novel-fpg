@@ -75,9 +75,5 @@ const String genderFemale = '2';
 
 enum Gender { unknown, male, female }
 
-const appearanceFollowSystem = 0;
-const appearanceLight = 1;
-const appearanceDark = 2;
-
 const exceptionCaughtBySelf = 'EXCEPTION CAUGHT BY SELF';
 const stackTraceTag = 'STACK TRACE';

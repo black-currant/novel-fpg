@@ -7,7 +7,7 @@ import 'package:novel_flutter/reader/reader_config.dart';
 import 'package:novel_flutter/reader/reader_model.dart';
 import 'package:novel_flutter/utils/screen_util.dart';
 import 'package:flutter/material.dart';
-// import 'package:screen/screen.dart';
+import 'package:screen_brightness/screen_brightness.dart';
 
 /// 阅读器偏好选项条
 ///
@@ -111,8 +111,12 @@ class _ReaderPrefsBarState extends State<ReaderPrefsBar>
                 value: model.screenBrightness,
                 activeColor: Theme.of(context).colorScheme.secondary,
                 inactiveColor: Theme.of(context).textTheme.headline6!.color,
-                onChanged: (value) {
-                  // Screen.setBrightness(value);
+                onChanged: (value) async {
+                  try {
+                    await ScreenBrightness().setScreenBrightness(value);
+                  } catch (e) {
+                    print(e);
+                  }
                   model.screenBrightness = value;
                   setState(() {});
                 },

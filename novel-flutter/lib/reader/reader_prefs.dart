@@ -8,7 +8,6 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 /// 阅读器偏好选项
-///
 class ReaderPrefs extends StatefulWidget {
   const ReaderPrefs({Key? key}) : super(key: key);
 

@@ -54,7 +54,7 @@ class _ReaderCatalogState extends State<ReaderCatalog>
     _book = widget.book;
 
     _controller = AnimationController(
-      duration: Duration(milliseconds: ReaderConfig.duration),
+      duration: const Duration(milliseconds: ReaderConfig.duration),
       vsync: this,
     );
     _animation = Tween(begin: 0.0, end: 1.0).animate(_controller);
@@ -167,7 +167,7 @@ class _ReaderCatalogState extends State<ReaderCatalog>
 
   hide(int viewIndex) async {
     _controller.reverse();
-    Timer(Duration(milliseconds: ReaderConfig.duration), () {
+    Timer(const Duration(milliseconds: ReaderConfig.duration), () {
       widget.onTap(viewIndex);
     });
   }

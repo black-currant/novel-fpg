@@ -115,8 +115,8 @@ void devLog(
   String message, {
   DateTime? time,
   int? sequenceNumber,
-  int level: 0,
-  String name: '',
+  int level = 0,
+  String name = '',
   Zone? zone,
   Object? error,
   StackTrace? stackTrace,

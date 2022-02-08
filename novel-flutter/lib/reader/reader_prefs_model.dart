@@ -30,19 +30,8 @@ class ReaderPrefsModel with ChangeNotifier {
     _darkModel = _prefs.getBool(kReaderDarkModel) ?? false;
     _automaticRenewal = _prefs.getBool(kAutomaticRenewal) ?? false;
 
-    debugPrint('reader info:' +
-        ',fontSize:' +
-        _fontSize.toString() +
-        ',screenBrightness:' +
-        _screenBrightness.toString() +
-        ',wakelock:' +
-        _wakelock.toString() +
-        ',lineHeight:' +
-        _lineHeight.toString() +
-        ',darkModel:' +
-        _darkModel.toString() +
-        ',automaticRenewal:' +
-        _automaticRenewal.toString());
+    debugPrint(
+        'Reader info: fontSize=$_fontSize,screenBrightness=$_screenBrightness,wakelock=$_wakelock,lineHeight=$_lineHeight,darkModel=_darkModel,automaticRenewal=$_automaticRenewal');
   }
 
   late bool _wakelock;

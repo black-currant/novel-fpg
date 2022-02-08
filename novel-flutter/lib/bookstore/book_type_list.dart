@@ -52,7 +52,7 @@ class _State extends State<BookTypeListPage>
               horizontal: 24,
             ),
             itemCount: 20,
-            item: BookTypeSkeleton(),
+            item: const BookTypeSkeleton(),
           );
         } else if (model.isError) {
           return ViewStateErrorWidget(

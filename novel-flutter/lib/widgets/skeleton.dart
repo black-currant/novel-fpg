@@ -15,9 +15,10 @@ class SizeSkeleton extends StatelessWidget {
       : width = 0.0,
         height = 0.0;
 
-  SizeSkeleton.fromSize({Size? size})
+  SizeSkeleton.fromSize({Key? key, Size? size})
       : width = size?.width,
-        height = size?.height;
+        height = size?.height,
+        super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -56,7 +57,7 @@ class ContainerSkeleton extends StatelessWidget {
       height: height,
       decoration: BoxDecoration(
         shape: shape,
-        border: Border(bottom: BorderSide(width: 0.3)),
+        border: const Border(bottom: BorderSide(width: 0.3)),
         color: isDark ? Colors.grey[700] : Colors.grey[300],
       ),
     );
@@ -71,13 +72,14 @@ class ListSkeleton extends StatelessWidget {
   final IndexedWidgetBuilder itemBuilder;
   final IndexedWidgetBuilder separatorBuilder;
 
-  ListSkeleton({
+  const ListSkeleton({
+    Key? key,
     required this.itemCount,
     required this.item,
     required this.padding,
     required this.separatorBuilder,
     required this.itemBuilder,
-  });
+  }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -85,7 +87,7 @@ class ListSkeleton extends StatelessWidget {
       separatorBuilder: separatorBuilder,
       padding: padding,
       shrinkWrap: true,
-      physics: NeverScrollableScrollPhysics(),
+      physics: const NeverScrollableScrollPhysics(),
       itemCount: itemCount,
       itemBuilder: itemBuilder,
     );

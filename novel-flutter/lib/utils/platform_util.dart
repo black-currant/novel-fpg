@@ -1,7 +1,6 @@
 import 'dart:io';
 
 import 'package:device_info/device_info.dart';
-import 'package:flutter/foundation.dart';
 
 /// 系统平台工具
 class PlatformUtil {

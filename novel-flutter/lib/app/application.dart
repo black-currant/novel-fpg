@@ -42,8 +42,8 @@ class MyApp extends StatelessWidget {
                       GlobalCupertinoLocalizations.delegate,
                     ],
                     supportedLocales: S.delegate.supportedLocales,
-                    theme: themeModel.theme,
-                    darkTheme: themeModel.darkTheme,
+                    theme: themeModel.themeData(),
+                    darkTheme: themeModel.themeData(platformDarkMode: true),
                     debugShowCheckedModeBanner: false,
                     // 调试标记
                     showPerformanceOverlay: false,

@@ -163,31 +163,6 @@ class _ReaderMenuState extends State<ReaderMenu>
                   ),
                 ),
               ),
-//          IconButton(
-//              onPressed: () {
-//                showToast("");
-//              },
-//              icon: Image.asset('img/read_icon_voice.png')),
-
-//          PopupMenuButton(
-//              icon: MyIcons.more,
-//              onSelected: (value) {
-//                showToast(value.toString());
-//              },
-//              itemBuilder: (BuildContext context) => <PopupMenuEntry>[
-//                    const PopupMenuItem(
-//                      child: ListTile(
-//                        leading: Icon(Icons.add_circle_outline),
-//                        title: Text("popupMenuButton1"),
-//                      ),
-//                    ),
-//                    const PopupMenuItem(
-//                      child: ListTile(
-//                        leading: Icon(Icons.add_circle_outline),
-//                        title: Text("popupMenuButton2"),
-//                      ),
-//                    ),
-//                  ]),
             ],
           ),
         ),
@@ -317,6 +292,7 @@ class _ReaderMenuState extends State<ReaderMenu>
                         onPressed: previousChapter,
                         child: Text(
                           S.of(context).previousChapter,
+                          style: Theme.of(context).textTheme.subtitle2,
                         ),
                       ),
                       Expanded(
@@ -340,6 +316,7 @@ class _ReaderMenuState extends State<ReaderMenu>
                         onPressed: nextChapter,
                         child: Text(
                           S.of(context).nextChapter,
+                          style: Theme.of(context).textTheme.subtitle2,
                         ),
                       ),
                     ],
@@ -356,7 +333,6 @@ class _ReaderMenuState extends State<ReaderMenu>
                         isDark ? S.of(context).daytime : S.of(context).night,
                         isDark ? Icons.brightness_7 : Icons.brightness_3, () {
                       switchDarkMode(context);
-//                      widget.readerModel.refreshDarkModel();
                       hide(ReaderModel.nothing);
                     }),
                     _buildItem(S.of(context).prefs, Icons.settings, () {

@@ -17,7 +17,7 @@ import 'package:provider/provider.dart';
 void nextPageAfterSucceededLogout(BuildContext context) {
   http.refreshToken();
   Navigator.of(context)
-      .pushNamedAndRemoveUntil(RouteName.signIn, (route) => route == null);
+      .pushNamedAndRemoveUntil(RouteName.signIn, (route) => false);
 }
 
 /// APP设置

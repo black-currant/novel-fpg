@@ -105,7 +105,7 @@ class _State extends State<SignInPage> {
     UserModel model = Provider.of(context, listen: false);
     if (model.user.preference == 0) {
       Navigator.of(context).pushNamedAndRemoveUntil(
-          RouteName.chooseReadingPrefs, (route) => route == null);
+          RouteName.chooseReadingPrefs, (route) => false);
     } else {
 //    if (Navigator.canPop(context)) {
 //      Navigator.pop(context, true);

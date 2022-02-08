@@ -16,7 +16,8 @@ class LoginFormField extends StatefulWidget {
   final bool autofocus;
   final FocusNode? focusNode;
 
-  LoginFormField({
+  const LoginFormField({
+    Key? key,
     this.hintText,
     this.prefixIcon,
     this.controller,
@@ -26,7 +27,7 @@ class LoginFormField extends StatefulWidget {
     this.visibly = false,
     this.autofocus = false,
     this.focusNode,
-  });
+  }) : super(key: key);
 
   @override
   _LoginFormFieldState createState() => _LoginFormFieldState();
@@ -113,12 +114,13 @@ class LoginFormFieldSuffixIcon extends StatelessWidget {
   final bool obscureText;
   final bool visibly; // 密码可见
 
-  LoginFormFieldSuffixIcon({
+  const LoginFormFieldSuffixIcon({
+    Key? key,
     required this.controller,
     required this.obscureNotifier,
     this.obscureText = true, // 晦涩的文字
     this.visibly = true,
-  });
+  }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -162,7 +164,7 @@ class LoginFormFieldSuffixIcon extends StatelessWidget {
 class LoginFormFieldClearIcon extends StatefulWidget {
   final TextEditingController controller;
 
-  LoginFormFieldClearIcon(this.controller);
+  const LoginFormFieldClearIcon(this.controller, {Key? key}) : super(key: key);
 
   @override
   _LoginFormFieldClearIconState createState() =>

@@ -99,7 +99,7 @@ class _State extends State<EditBookTypePrefsPage> {
               separatorBuilder: (context, index) => spaceDividerMedium,
               padding: pageEdgeInsets,
               itemCount: 9,
-              item: OrderSkeleton(),
+              item: const OrderSkeleton(),
             );
             // GridShimmer(
             //   gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(

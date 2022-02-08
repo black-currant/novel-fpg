@@ -213,9 +213,9 @@ class _State extends State<BookshelfPage> with AutomaticKeepAliveClientMixin {
         children: <Widget>[
           _buildCheckIn(),
           const SpaceDivider.medium(),
-          DailyPicksView(),
+          const DailyPicksView(),
           const SpaceDivider.medium(),
-          EditorChoiceView(),
+          const EditorChoiceView(),
         ],
       ),
     );
@@ -273,7 +273,7 @@ class _State extends State<BookshelfPage> with AutomaticKeepAliveClientMixin {
         separatorBuilder: (context, index) => spaceDividerMedium,
         padding: pageEdgeInsets,
         itemCount: 9,
-        item: BookSkeletonMedium(),
+        item: const BookSkeletonMedium(),
       );
     } else if (bookshelfModel.isError) {
       return ViewStateErrorWidget(

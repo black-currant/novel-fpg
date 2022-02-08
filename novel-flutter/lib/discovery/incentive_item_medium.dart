@@ -1,9 +1,7 @@
 import 'package:novel_flutter/app/constant.dart';
 import 'package:novel_flutter/app/dimens.dart';
-import 'package:novel_flutter/app/routes.dart';
 import 'package:novel_flutter/app/styles.dart';
 import 'package:novel_flutter/generated/l10n.dart';
-import 'package:novel_flutter/login/check_login.dart';
 import 'package:novel_flutter/model/incentive.dart';
 import 'package:novel_flutter/utils/util.dart';
 import 'package:novel_flutter/view_model/navigation_model.dart';

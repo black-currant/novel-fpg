@@ -1,6 +1,6 @@
 # novel-flutter
 
-## 1、线上体验App
+## 1、线上体验 App
 
 - Android 安装包[下载地址](https://github.com/black-currant/novel-fpg/raw/main/novel-flutter/app-release.apk)
 
@@ -57,7 +57,7 @@ $ sudo xcodebuild -runFirstLaunch
 
 ## 6、选择 IDE
 
-推荐使用 [vscode](https://code.visualstudio.com/)，下载安装后，在插件市场搜索`flutter`和`dart`，安装插件。
+推荐使用 [vscode](https://code.visualstudio.com/)，下载安装后，在插件市场搜索`flutter`，`dart`和`Flutter Intl`，安装插件。
 
 ## 7、参考
 
