@@ -35,7 +35,7 @@ Android 安装包[下载地址](https://github.com/black-currant/novel-fpg/raw/m
 
 ## 4、技术选型
 
-- 前端：基于Flutter实现，[传送入口](novel-flutter/README.md)
+- 前端：基于Dart + Flutter实现，[传送入口](novel-flutter/README.md)
 - Python后端：基于Python + Flask实现，[传送入口](novel-python/README.md)
 - Go后端：基于Go + Gin实现，[传送入口](novel-go/README.md)
 

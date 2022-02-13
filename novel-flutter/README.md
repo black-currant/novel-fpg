@@ -32,11 +32,9 @@ export PATH="$PATH":"[Flutter 解压的路径]/flutter/.pub-cache/bin"
 flutter doctor
 ```
 
-## 4、平台设置
+## 4、iOS 平台设置
 
 macOS 支持在 iOS、Android 和 Web 上开发 Flutter 应用（技术预览版）。现在至少完成一个平台设置步骤，以便能够构建和运行您的第一个 Flutter 应用程序。
-
-## 5、iOS 设置
 
 &ensp;&ensp;&ensp;安装 Xcode
 
@@ -55,9 +53,9 @@ $ sudo xcodebuild -runFirstLaunch
 
 - 配置 iOS 模拟器，终端执行`$ open -a Simulator `。
 
-## 6、选择 IDE
+## 6、选择 Editor
 
-推荐使用 [vscode](https://code.visualstudio.com/)，下载安装后，在插件市场搜索`flutter`，`dart`和`Flutter Intl`，安装插件。
+推荐使用 [VS Code](https://code.visualstudio.com/)，下载安装后，在插件市场搜索`flutter`，`dart`和`Flutter Intl`，安装插件。
 
 ## 7、参考
 
@@ -65,5 +63,5 @@ $ sudo xcodebuild -runFirstLaunch
 
 ## 8、鸣谢
 
-- [fun_android_flutter](https://github.com/phoenixsky/fun_android_flutter)提供架构和基础封装
+- [fun_android_flutter](https://github.com/phoenixsky/fun_android_flutter)提供 provider 的封装
 - [flutter_shuqi](https://github.com/huanxsd/flutter_shuqi)提供阅读器
