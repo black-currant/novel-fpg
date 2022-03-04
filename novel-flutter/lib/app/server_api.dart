@@ -33,44 +33,6 @@ final ServerAPI serverAPI = ServerAPI();
 
 /// 服务器/后端的接口
 class ServerAPI {
-  /// 授权登录
-  Future auth(
-    User param,
-    String deviceId,
-    String deviceName,
-    String os,
-    String osVersion,
-    String appVersion,
-    String countryCode, {
-    int? linkedUserId,
-  }) async {
-    final Map<String, dynamic> params = {
-      'fbid': param.fbid,
-      'provider': param.provider, // 第三方服务提供商，脸书，微信，邮箱
-      'pid': param.pid,
-      'nickname': param.nickname,
-      'gender': param.gender,
-      'phone': param.phone,
-      'email': param.email,
-      'photourl': param.photourl,
-      'deviceid': deviceId,
-      'device_mode': deviceName,
-      'os': os,
-      'os_version': osVersion,
-      'app_version': appVersion,
-      'country': countryCode,
-    };
-
-    // 关联帐号
-    if (linkedUserId != null) params['uid'] = linkedUserId;
-    final body = {
-      'action': 'auth',
-      'data': params,
-    };
-    var response = await http.post(apiPath, data: body);
-    return User.fromJson(response.data);
-  }
-
   /// 用户登录
   Future<User?> login(
     String account,

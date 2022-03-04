@@ -22,11 +22,9 @@ class MessageLookup extends MessageLookupByLibrary {
 
   static String m0(dayCount) => "已簽到${dayCount}天，繼續加油";
 
-  static String m1(email) => "已經發送一封郵件到${email}";
+  static String m1(platform) => "建議您註冊或登錄，使您能夠從其任何${platform}設備訪問內容。";
 
-  static String m2(platform) => "建議您註冊或登錄，使您能夠從其任何${platform}設備訪問內容。";
-
-  static String m3(bookCount) => "確定將選中的${bookCount}本書籍移出書架?";
+  static String m2(bookCount) => "確定將選中的${bookCount}本書籍移出書架?";
 
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
@@ -81,16 +79,12 @@ class MessageLookup extends MessageLookupByLibrary {
         "checkInSlogan": MessageLookupByLibrary.simpleMessage("天簽到領取福利"),
         "checkInSucceeded": MessageLookupByLibrary.simpleMessage("簽到成功，獎勵"),
         "checkOrder": MessageLookupByLibrary.simpleMessage("查看訂單"),
-        "checkVerificationCode":
-            MessageLookupByLibrary.simpleMessage("驗證已發送，請查收"),
         "clear": MessageLookupByLibrary.simpleMessage("清空"),
         "close": MessageLookupByLibrary.simpleMessage("關閉"),
         "comic": MessageLookupByLibrary.simpleMessage("漫畫"),
         "complete": MessageLookupByLibrary.simpleMessage("完結"),
         "completed": MessageLookupByLibrary.simpleMessage("已完成"),
         "confirmPassword": MessageLookupByLibrary.simpleMessage("確認密碼"),
-        "connectAlready": MessageLookupByLibrary.simpleMessage("已關聯"),
-        "connectNow": MessageLookupByLibrary.simpleMessage("立即關聯"),
         "continueReading": MessageLookupByLibrary.simpleMessage("繼續閱讀"),
         "copy2Clipboard": MessageLookupByLibrary.simpleMessage("已經復製到剪切板"),
         "currentlyLatestVersion":
@@ -109,8 +103,6 @@ class MessageLookup extends MessageLookupByLibrary {
         "editNickname": MessageLookupByLibrary.simpleMessage("編輯昵稱"),
         "editorChoice": MessageLookupByLibrary.simpleMessage("主編力推"),
         "email": MessageLookupByLibrary.simpleMessage("電子郵箱"),
-        "emailHint": MessageLookupByLibrary.simpleMessage("輸入電子郵箱"),
-        "emailSentTo": m1,
         "enterTheApplication": MessageLookupByLibrary.simpleMessage("進入書城"),
         "entry": MessageLookupByLibrary.simpleMessage("進入"),
         "exchangeRate": MessageLookupByLibrary.simpleMessage("充值金額（\$1=100書幣）"),
@@ -120,16 +112,12 @@ class MessageLookup extends MessageLookupByLibrary {
         "female": MessageLookupByLibrary.simpleMessage("女生"),
         "fetchingProducts": MessageLookupByLibrary.simpleMessage("獲取商品"),
         "finished": MessageLookupByLibrary.simpleMessage("已完成"),
-        "firstLoginWillNewAccount":
-            MessageLookupByLibrary.simpleMessage("首次登錄會自動創建新帳號"),
         "followSystem": MessageLookupByLibrary.simpleMessage("跟隨系統"),
         "free": MessageLookupByLibrary.simpleMessage("免費"),
         "gender": MessageLookupByLibrary.simpleMessage("性別"),
         "general": MessageLookupByLibrary.simpleMessage("通用"),
-        "getVerificationCode": MessageLookupByLibrary.simpleMessage("獲取驗證碼"),
         "gotoPurchase": MessageLookupByLibrary.simpleMessage("購買本章，繼續閱讀"),
         "gotoSignUp": MessageLookupByLibrary.simpleMessage("沒有帳號？去註冊"),
-        "guest": MessageLookupByLibrary.simpleMessage("遊客"),
         "help": MessageLookupByLibrary.simpleMessage("幫助"),
         "helpAndFeedback": MessageLookupByLibrary.simpleMessage("幫助與反饋"),
         "iHaveReadAndAgree": MessageLookupByLibrary.simpleMessage("我已閱讀並同意"),
@@ -142,8 +130,6 @@ class MessageLookup extends MessageLookupByLibrary {
         "jumpToUpdateInStore": MessageLookupByLibrary.simpleMessage("跳轉到商店更新"),
         "keepSecret": MessageLookupByLibrary.simpleMessage("保密"),
         "latest": MessageLookupByLibrary.simpleMessage("最新"),
-        "legacyAccountHint":
-            MessageLookupByLibrary.simpleMessage("電子郵箱/手機號碼/昵稱"),
         "less20w": MessageLookupByLibrary.simpleMessage("20萬字以下"),
         "lightModel": MessageLookupByLibrary.simpleMessage("淺色模式"),
         "lineSpacing": MessageLookupByLibrary.simpleMessage("行間距"),
@@ -170,7 +156,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "nickname": MessageLookupByLibrary.simpleMessage("昵稱"),
         "night": MessageLookupByLibrary.simpleMessage("夜間"),
         "notSetNickname": MessageLookupByLibrary.simpleMessage("您尚未設置昵稱"),
-        "notYetLoginMsg": m2,
+        "notYetLoginMsg": m1,
         "notifications": MessageLookupByLibrary.simpleMessage("通知"),
         "num": MessageLookupByLibrary.simpleMessage("第"),
         "ok": MessageLookupByLibrary.simpleMessage("確定"),
@@ -178,7 +164,6 @@ class MessageLookup extends MessageLookupByLibrary {
         "openSourceLicense": MessageLookupByLibrary.simpleMessage("開源許可"),
         "operationFailed": MessageLookupByLibrary.simpleMessage("操作失敗"),
         "operationSucceeded": MessageLookupByLibrary.simpleMessage("操作成功"),
-        "orSignInWith": MessageLookupByLibrary.simpleMessage("其他登錄方式"),
         "orderFinished": MessageLookupByLibrary.simpleMessage("訂單結束"),
         "orderWaitPay": MessageLookupByLibrary.simpleMessage("訂單待支付"),
         "orderWaitPayTitle": MessageLookupByLibrary.simpleMessage("您有訂單尚未支付"),
@@ -186,13 +171,10 @@ class MessageLookup extends MessageLookupByLibrary {
         "page": MessageLookupByLibrary.simpleMessage("頁"),
         "passwordHint": MessageLookupByLibrary.simpleMessage("輸入密碼"),
         "payment": MessageLookupByLibrary.simpleMessage("支付"),
-        "phoneNumberVerificationFailed":
-            MessageLookupByLibrary.simpleMessage("電話號碼驗證失敗"),
         "photoAlbum": MessageLookupByLibrary.simpleMessage("相冊"),
         "pleaseConfirmPassword": MessageLookupByLibrary.simpleMessage("請確認密碼"),
         "pleaseTypeAccount": MessageLookupByLibrary.simpleMessage("請輸入帳號"),
         "pleaseTypeContent": MessageLookupByLibrary.simpleMessage("請輸入內容"),
-        "pleaseTypeEmail": MessageLookupByLibrary.simpleMessage("請輸入電子郵箱"),
         "pleaseTypePassword": MessageLookupByLibrary.simpleMessage("請輸入密碼"),
         "prefs": MessageLookupByLibrary.simpleMessage("設置"),
         "previousChapter": MessageLookupByLibrary.simpleMessage("上一章"),
@@ -214,7 +196,7 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("釋放可刷新"),
         "refreshTwoLevel": MessageLookupByLibrary.simpleMessage("歡迎光臨,我的空中樓閣"),
         "refreshing": MessageLookupByLibrary.simpleMessage("刷新中"),
-        "removeBookMsg": m3,
+        "removeBookMsg": m2,
         "retry": MessageLookupByLibrary.simpleMessage("重試"),
         "review": MessageLookupByLibrary.simpleMessage("軟體不錯贊一個"),
         "rule": MessageLookupByLibrary.simpleMessage("規則"),
@@ -225,23 +207,12 @@ class MessageLookup extends MessageLookupByLibrary {
         "searchHot": MessageLookupByLibrary.simpleMessage("熱門搜索"),
         "searchShake": MessageLookupByLibrary.simpleMessage("換一批"),
         "selectAll": MessageLookupByLibrary.simpleMessage("全選"),
-        "selectCountryOrRegion":
-            MessageLookupByLibrary.simpleMessage("選擇國家或地區"),
         "serial": MessageLookupByLibrary.simpleMessage("連載"),
         "shortStory": MessageLookupByLibrary.simpleMessage("短篇"),
         "show": MessageLookupByLibrary.simpleMessage("顯示"),
         "signIn": MessageLookupByLibrary.simpleMessage("登錄"),
         "signInFailed": MessageLookupByLibrary.simpleMessage("登錄失敗"),
         "signInSucceeded": MessageLookupByLibrary.simpleMessage("登錄成功"),
-        "signInWithApple": MessageLookupByLibrary.simpleMessage("通過蘋果登錄"),
-        "signInWithEmail": MessageLookupByLibrary.simpleMessage("電子郵箱登錄"),
-        "signInWithFacebook": MessageLookupByLibrary.simpleMessage("通過臉書登錄"),
-        "signInWithGoogle": MessageLookupByLibrary.simpleMessage("通過谷歌登錄"),
-        "signInWithGuest": MessageLookupByLibrary.simpleMessage("遊客登錄"),
-        "signInWithLegacy": MessageLookupByLibrary.simpleMessage("舊版本用戶登錄"),
-        "signInWithPhoneNumber":
-            MessageLookupByLibrary.simpleMessage("手機號碼註冊/登錄"),
-        "signInWithWeChat": MessageLookupByLibrary.simpleMessage("通過微信登錄"),
         "signUp": MessageLookupByLibrary.simpleMessage("註冊"),
         "skin": MessageLookupByLibrary.simpleMessage("外觀"),
         "skip": MessageLookupByLibrary.simpleMessage("跳過"),
@@ -253,11 +224,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "takePicture": MessageLookupByLibrary.simpleMessage("拍照"),
         "termsOfService": MessageLookupByLibrary.simpleMessage("服務條款"),
         "thisWeekRead": MessageLookupByLibrary.simpleMessage("本周已閱讀"),
-        "toBeVerified": MessageLookupByLibrary.simpleMessage("待驗證"),
         "total": MessageLookupByLibrary.simpleMessage("總計"),
         "twoPwdDifferent": MessageLookupByLibrary.simpleMessage("兩次密碼不一致"),
-        "typePhoneNumber": MessageLookupByLibrary.simpleMessage("輸入手機號碼"),
-        "typeVerificationCode": MessageLookupByLibrary.simpleMessage("輸入驗證碼"),
         "unSelectAll": MessageLookupByLibrary.simpleMessage("全不選"),
         "unfinished": MessageLookupByLibrary.simpleMessage("待付款"),
         "unknown": MessageLookupByLibrary.simpleMessage("未知"),
@@ -267,11 +235,6 @@ class MessageLookup extends MessageLookupByLibrary {
         "userID": MessageLookupByLibrary.simpleMessage("用戶ID"),
         "userProfile": MessageLookupByLibrary.simpleMessage("個人信息"),
         "usernameHint": MessageLookupByLibrary.simpleMessage("輸入用戶名"),
-        "verificationCode": MessageLookupByLibrary.simpleMessage("驗證碼"),
-        "verificationCodeSendTo":
-            MessageLookupByLibrary.simpleMessage("驗證碼已發送至"),
-        "verifyEmail": MessageLookupByLibrary.simpleMessage("驗證電子郵箱"),
-        "verifyPhoneNumber": MessageLookupByLibrary.simpleMessage("驗證手機號碼"),
         "viewStateButtonRefresh": MessageLookupByLibrary.simpleMessage("刷新一下"),
         "viewStateButtonRetry": MessageLookupByLibrary.simpleMessage("重試"),
         "viewStateMessageEmpty": MessageLookupByLibrary.simpleMessage("空空如也"),

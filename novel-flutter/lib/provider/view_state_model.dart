@@ -1,9 +1,11 @@
 import 'dart:io';
 
+import 'package:novel_flutter/app/server_api_code.dart';
 import 'package:novel_flutter/app/server_api_throw.dart';
 import 'package:novel_flutter/generated/l10n.dart';
 import 'package:dio/dio.dart';
 import 'package:flutter/material.dart';
+import 'package:novel_flutter/view_model/user_model.dart';
 import 'package:oktoast/oktoast.dart';
 
 import 'view_state.dart';
@@ -92,16 +94,18 @@ class ViewStateModel with ChangeNotifier {
         // to be continue...
         message = dioError.error;
       } else {
-        // 以下都是DioErrorType.DEFAULT
+        // 以下都是DioErrorType.other
         // dio将原error重新套了一层
         dynamic error = dioError.error;
-        if (error is UnauthorizedException) {
-          errorType = ViewStateErrorType.unauthorizedError;
-        }
-        // else if (error is EmailVerifiedException) {
-        //   errorType = ViewStateErrorType.emailVerifiedError;
-        // }
-        else if (error is ActionFailedException) {
+        if (error is ActionFailedException) {
+          if (error.code == tokenMissing ||
+              error.code == tokenExpired ||
+              error.code == tokenError) {
+            errorType = ViewStateErrorType.unauthorizedError;
+            // 由于token过期,所以需要清除本地存储的登录信息
+            UserModel model = UserModel();
+            model.clear();
+          }
           message = error.message;
         } else if (error is SocketException || error is HandshakeException) {
           errorType = ViewStateErrorType.networkTimeOutError;

@@ -133,7 +133,6 @@ class _State extends State<DiscoveryPage> with AutomaticKeepAliveClientMixin {
             onPressed: () async {
               switch (model.viewStateError!.errorType) {
                 case ViewStateErrorType.unauthorizedError:
-                  MyRouter.showLoginOptions(context);
                   var successful = await MyRouter.showLoginOptions(context);
                   // 登录成功,获取数据,刷新页面
                   if (successful ?? false) {

@@ -110,36 +110,6 @@ class S {
     );
   }
 
-  /// `已经发送一封邮件到{email}`
-  String emailSentTo(Object email) {
-    return Intl.message(
-      '已经发送一封邮件到$email',
-      name: 'emailSentTo',
-      desc: '',
-      args: [email],
-    );
-  }
-
-  /// `验证电子邮箱`
-  String get verifyEmail {
-    return Intl.message(
-      '验证电子邮箱',
-      name: 'verifyEmail',
-      desc: '',
-      args: [],
-    );
-  }
-
-  /// `待验证`
-  String get toBeVerified {
-    return Intl.message(
-      '待验证',
-      name: 'toBeVerified',
-      desc: '',
-      args: [],
-    );
-  }
-
   /// `保密`
   String get keepSecret {
     return Intl.message(
@@ -240,86 +210,6 @@ class S {
     );
   }
 
-  /// `其他登录方式`
-  String get orSignInWith {
-    return Intl.message(
-      '其他登录方式',
-      name: 'orSignInWith',
-      desc: '',
-      args: [],
-    );
-  }
-
-  /// `通过苹果登录`
-  String get signInWithApple {
-    return Intl.message(
-      '通过苹果登录',
-      name: 'signInWithApple',
-      desc: '',
-      args: [],
-    );
-  }
-
-  /// `通过谷歌登录`
-  String get signInWithGoogle {
-    return Intl.message(
-      '通过谷歌登录',
-      name: 'signInWithGoogle',
-      desc: '',
-      args: [],
-    );
-  }
-
-  /// `通过脸书登录`
-  String get signInWithFacebook {
-    return Intl.message(
-      '通过脸书登录',
-      name: 'signInWithFacebook',
-      desc: '',
-      args: [],
-    );
-  }
-
-  /// `通过微信登录`
-  String get signInWithWeChat {
-    return Intl.message(
-      '通过微信登录',
-      name: 'signInWithWeChat',
-      desc: '',
-      args: [],
-    );
-  }
-
-  /// `电子邮箱登录`
-  String get signInWithEmail {
-    return Intl.message(
-      '电子邮箱登录',
-      name: 'signInWithEmail',
-      desc: '',
-      args: [],
-    );
-  }
-
-  /// `旧版本用户登录`
-  String get signInWithLegacy {
-    return Intl.message(
-      '旧版本用户登录',
-      name: 'signInWithLegacy',
-      desc: '',
-      args: [],
-    );
-  }
-
-  /// `游客登录`
-  String get signInWithGuest {
-    return Intl.message(
-      '游客登录',
-      name: 'signInWithGuest',
-      desc: '',
-      args: [],
-    );
-  }
-
   /// `密码错误`
   String get wrongPassword {
     return Intl.message(
@@ -345,26 +235,6 @@ class S {
     return Intl.message(
       '登录成功',
       name: 'signInSucceeded',
-      desc: '',
-      args: [],
-    );
-  }
-
-  /// `电子邮箱/手机号码/昵称`
-  String get legacyAccountHint {
-    return Intl.message(
-      '电子邮箱/手机号码/昵称',
-      name: 'legacyAccountHint',
-      desc: '',
-      args: [],
-    );
-  }
-
-  /// `输入电子邮箱`
-  String get emailHint {
-    return Intl.message(
-      '输入电子邮箱',
-      name: 'emailHint',
       desc: '',
       args: [],
     );
@@ -420,16 +290,6 @@ class S {
     );
   }
 
-  /// `游客`
-  String get guest {
-    return Intl.message(
-      '游客',
-      name: 'guest',
-      desc: '',
-      args: [],
-    );
-  }
-
   /// `确定退出帐号？`
   String get areYouSureToLogout {
     return Intl.message(
@@ -445,26 +305,6 @@ class S {
     return Intl.message(
       '您尚未设置昵称',
       name: 'notSetNickname',
-      desc: '',
-      args: [],
-    );
-  }
-
-  /// `验证码已发送至`
-  String get verificationCodeSendTo {
-    return Intl.message(
-      '验证码已发送至',
-      name: 'verificationCodeSendTo',
-      desc: '',
-      args: [],
-    );
-  }
-
-  /// `选择国家或地区`
-  String get selectCountryOrRegion {
-    return Intl.message(
-      '选择国家或地区',
-      name: 'selectCountryOrRegion',
       desc: '',
       args: [],
     );
@@ -535,96 +375,6 @@ class S {
     return Intl.message(
       '外观',
       name: 'skin',
-      desc: '',
-      args: [],
-    );
-  }
-
-  /// `验证已发送，请查收`
-  String get checkVerificationCode {
-    return Intl.message(
-      '验证已发送，请查收',
-      name: 'checkVerificationCode',
-      desc: '',
-      args: [],
-    );
-  }
-
-  /// `电话号码验证失败`
-  String get phoneNumberVerificationFailed {
-    return Intl.message(
-      '电话号码验证失败',
-      name: 'phoneNumberVerificationFailed',
-      desc: '',
-      args: [],
-    );
-  }
-
-  /// `验证码`
-  String get verificationCode {
-    return Intl.message(
-      '验证码',
-      name: 'verificationCode',
-      desc: '',
-      args: [],
-    );
-  }
-
-  /// `获取验证码`
-  String get getVerificationCode {
-    return Intl.message(
-      '获取验证码',
-      name: 'getVerificationCode',
-      desc: '',
-      args: [],
-    );
-  }
-
-  /// `验证手机号码`
-  String get verifyPhoneNumber {
-    return Intl.message(
-      '验证手机号码',
-      name: 'verifyPhoneNumber',
-      desc: '',
-      args: [],
-    );
-  }
-
-  /// `输入验证码`
-  String get typeVerificationCode {
-    return Intl.message(
-      '输入验证码',
-      name: 'typeVerificationCode',
-      desc: '',
-      args: [],
-    );
-  }
-
-  /// `输入手机号码`
-  String get typePhoneNumber {
-    return Intl.message(
-      '输入手机号码',
-      name: 'typePhoneNumber',
-      desc: '',
-      args: [],
-    );
-  }
-
-  /// `首次登录会自动创建新帐号`
-  String get firstLoginWillNewAccount {
-    return Intl.message(
-      '首次登录会自动创建新帐号',
-      name: 'firstLoginWillNewAccount',
-      desc: '',
-      args: [],
-    );
-  }
-
-  /// `手机号码注册/登录`
-  String get signInWithPhoneNumber {
-    return Intl.message(
-      '手机号码注册/登录',
-      name: 'signInWithPhoneNumber',
       desc: '',
       args: [],
     );
@@ -970,16 +720,6 @@ class S {
     );
   }
 
-  /// `请输入电子邮箱`
-  String get pleaseTypeEmail {
-    return Intl.message(
-      '请输入电子邮箱',
-      name: 'pleaseTypeEmail',
-      desc: '',
-      args: [],
-    );
-  }
-
   /// `编辑昵称`
   String get editNickname {
     return Intl.message(
@@ -1265,26 +1005,6 @@ class S {
     return Intl.message(
       '客服中心',
       name: 'customerService',
-      desc: '',
-      args: [],
-    );
-  }
-
-  /// `已关联`
-  String get connectAlready {
-    return Intl.message(
-      '已关联',
-      name: 'connectAlready',
-      desc: '',
-      args: [],
-    );
-  }
-
-  /// `立即关联`
-  String get connectNow {
-    return Intl.message(
-      '立即关联',
-      name: 'connectNow',
       desc: '',
       args: [],
     );

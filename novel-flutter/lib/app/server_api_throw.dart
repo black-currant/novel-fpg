@@ -11,14 +11,11 @@ class ActionFailedException implements Exception {
     code = respData.code;
     message = respData.message;
   }
-}
-
-/// 用于未登录等权限不够,需要跳转授权页面
-class UnauthorizedException implements Exception {
-  const UnauthorizedException();
 
   @override
-  String toString() => 'UnauthorizedException';
+  String toString() {
+    return 'errorCode=$code,errorMsg=$message';
+  }
 }
 
 /// 书币余额不足，需要跳转充值页面

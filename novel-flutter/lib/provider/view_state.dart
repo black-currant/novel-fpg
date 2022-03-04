@@ -12,7 +12,6 @@ enum ViewStateErrorType {
   networkTimeOutError, //网络错误
   unauthorizedError, //未授权(一般为未登录或者用户权限不足)
   insufficientBalanceError, //余额不足
-  emailVerifiedError //邮箱验证错误
 }
 
 class ViewStateError {

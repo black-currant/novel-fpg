@@ -6,6 +6,8 @@ import 'package:novel_flutter/app/server_api.dart';
 import 'package:novel_flutter/app/server_api_code.dart';
 import 'package:dio/dio.dart';
 import 'package:flutter/foundation.dart';
+import 'package:novel_flutter/app/server_api_throw.dart';
+import 'package:novel_flutter/view_model/user_model.dart';
 
 /// 本应用的HTTP拦截器
 /// 处理特殊请求头，解析响应体，处理非actionOK情况。
@@ -57,7 +59,7 @@ class MyInterceptor extends InterceptorsWrapper {
         DioError(
           requestOptions: response.requestOptions,
           response: response,
-          error: respData.message,
+          error: ActionFailedException.fromRespData(respData),
         ),
         true,
       );

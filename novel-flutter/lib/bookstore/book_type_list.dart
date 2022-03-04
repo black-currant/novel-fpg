@@ -1,6 +1,8 @@
 import 'package:novel_flutter/app/dimens.dart';
+import 'package:novel_flutter/app/routes.dart';
 import 'package:novel_flutter/bookstore/book_type_item.dart';
 import 'package:novel_flutter/provider/provider_widget.dart';
+import 'package:novel_flutter/provider/view_state.dart';
 import 'package:novel_flutter/provider/view_state_widget.dart';
 import 'package:novel_flutter/view_model/book_types_model.dart';
 import 'package:novel_flutter/widgets/shimmer.dart';
@@ -56,7 +58,22 @@ class _State extends State<BookTypeListPage>
           );
         } else if (model.isError) {
           return ViewStateErrorWidget(
-              error: model.viewStateError!, onPressed: model.initData);
+            error: model.viewStateError!,
+            onPressed: () async {
+              switch (model.viewStateError!.errorType) {
+                case ViewStateErrorType.unauthorizedError:
+                  var successful = await MyRouter.showLoginOptions(context);
+                  // 登录成功,获取数据,刷新页面
+                  if (successful ?? false) {
+                    model.initData();
+                  }
+                  break;
+                default:
+                  model.initData();
+                  break;
+              }
+            },
+          );
         } else if (model.isEmpty) {
           return ViewStateEmptyWidget(onPressed: model.initData);
         }

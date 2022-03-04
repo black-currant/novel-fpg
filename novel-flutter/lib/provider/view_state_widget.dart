@@ -125,7 +125,7 @@ class ViewStateErrorWidget extends StatelessWidget {
       case ViewStateErrorType.unauthorizedError:
         return ViewStateUnAuthWidget(
           image: image,
-          message: message,
+          message: message ?? errorMessage,
           buttonText: buttonText,
           onPressed: onPressed,
         );
@@ -194,7 +194,7 @@ class ViewStateUnAuthWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     return ViewStateWidget(
       onPressed: onPressed,
-      image: image ?? ViewStateUnAuthImage(),
+      image: image ?? const ViewStateUnAuthImage(),
       title: message ?? S.of(context).viewStateMessageUnAuth,
       buttonText: buttonText,
       buttonTextData: S.of(context).signIn,
