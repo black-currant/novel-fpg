@@ -33,7 +33,7 @@ COMMON: &common #基础配置
 
     # ES配置
     ELASTICSEARCH_URI: {
-        'hosts': 'http://elastic:paizitech@43.154.39.199:9200/'
+        'hosts': 'http://anonymous:paizitech@43.154.39.199:9200/'
     }
 
 DEVELOPMENT: &development
@@ -53,5 +53,5 @@ PRODUCTION: &production
         CACHE_REDIS_URL: 'redis://:123456@43.154.39.199:6379/0'
 
     ELASTICSEARCH_URI: {
-        'hosts': 'http://elastic:paizitech@43.154.39.199:9200/'
+        'hosts': 'http://anonymous:paizitech@43.154.39.199:9200/'
     }
