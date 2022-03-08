@@ -30,7 +30,7 @@
 cd novel-python
 python3.6 -m venv venv
 venv/Scripts/activate
-easy_install -U pip
+easy_install-3.6.exe pip==21.3.1
 pip3 install -r requirements.txt
 python3 run.py runserver
 ```
@@ -42,7 +42,7 @@ cd novel-python
 python3.6 -m venv venv
 chmod +x venv/bin/*
 venv/bin/activate
-venv/bin/easy_install -U pip
+venv/bin/easy_install pip==21.3.1
 venv/bin/pip3 install -r requirements.txt
 venv/bin/python3 run.py runserver
 ```
