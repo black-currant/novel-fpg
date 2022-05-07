@@ -6,7 +6,7 @@ COMMON: &common #基础配置
     DEFAULT_PAGE_SIZE: 30
 
     # 数据库连接
-    SQLALCHEMY_DATABASE_URI: 'mysql+pymysql://novel:ZrA9w#Rwuw@43.154.39.199:3306/novel?charset=utf8mb4'
+    SQLALCHEMY_DATABASE_URI: 'mysql+pymysql://novel:ZrA9w#Rwuw@ddns.pzrpa.com:3306/novel?charset=utf8mb4'
     SQLALCHEMY_TRACK_MODIFICATIONS: False
     SQLALCHEMY_POOL_SIZE: 200
     SQLALCHEMY_POOL_RECYCLE: 7200
@@ -24,16 +24,16 @@ COMMON: &common #基础配置
     QUEST_PATH: ./static/data/quest.csv
 
     # redis配置
-    REDIS_URL: 'redis://:123456@43.154.39.199:6379/0'
+    REDIS_URL: 'redis://:123456@ddns.pzrpa.com:6379/0'
     CACHE_CONFIG: &cache_config
         CACHE_TYPE: redis
-        CACHE_REDIS_URL: 'redis://:123456@43.154.39.199:6379/0'
+        CACHE_REDIS_URL: 'redis://:123456@ddns.pzrpa.com:6379/0'
         CACHE_DEFAULT_TIMEOUT: 0
         CACHE_THRESHOLD: 0
 
     # ES配置
     ELASTICSEARCH_URI: {
-        'hosts': 'http://anonymous:paizitech@43.154.39.199:9200/'
+        'hosts': 'http://anonymous:paizitech@ddns.pzrpa.com:9200/'
     }
 
 DEVELOPMENT: &development
@@ -45,13 +45,13 @@ PRODUCTION: &production
     DEBUG: False
     TOKEN_KEY: Q77c-x86qI2I9en-rwhYBWHhd575Z25ft-UGQeSqJa0=
 
-    SQLALCHEMY_DATABASE_URI: 'mysql+pymysql://novel:ZrA9w#Rwuw@43.154.39.199:3306/novel?charset=utf8mb4'
+    SQLALCHEMY_DATABASE_URI: 'mysql+pymysql://novel:ZrA9w#Rwuw@ddns.pzrpa.com:3306/novel?charset=utf8mb4'
 
-    REDIS_URL: 'redis://:123456@43.154.39.199:6379/0'
+    REDIS_URL: 'redis://:123456@ddns.pzrpa.com:6379/0'
     CACHE_CONFIG:
         <<: *cache_config
-        CACHE_REDIS_URL: 'redis://:123456@43.154.39.199:6379/0'
+        CACHE_REDIS_URL: 'redis://:123456@ddns.pzrpa.com:6379/0'
 
     ELASTICSEARCH_URI: {
-        'hosts': 'http://anonymous:paizitech@43.154.39.199:9200/'
+        'hosts': 'http://anonymous:paizitech@ddns.pzrpa.com:9200/'
     }
