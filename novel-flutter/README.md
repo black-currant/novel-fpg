@@ -56,12 +56,17 @@ $ sudo xcodebuild -runFirstLaunch
 ## 6、选择 Editor
 
 推荐使用 [VS Code](https://code.visualstudio.com/)，下载安装后，在插件市场搜索`flutter`，`dart`和`Flutter Intl`，安装插件。
+默认是 python 端的接口地址，如果要修改为 go 端的接口地址，可以在 lib/app/config.dart 文件中修改。
 
-## 7、参考
+## 7、运行
+
+切换到项目路径，运行`flutter run`。
+
+## 8、参考
 
 - [在 macOS 上安装和配置 Flutter 开发环境](https://flutter.cn/docs/get-started/install/macos)
 
-## 8、鸣谢
+## 9、鸣谢
 
 - [fun_android_flutter](https://github.com/phoenixsky/fun_android_flutter)提供 provider 的封装
 - [flutter_shuqi](https://github.com/huanxsd/flutter_shuqi)提供阅读器
