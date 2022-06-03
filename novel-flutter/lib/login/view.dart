@@ -132,39 +132,61 @@ class _State extends State<SignInPage> {
         //   },
         //   child:
         Scaffold(
+          resizeToAvoidBottomInset: false,
       appBar: AppBar(title: Text(S.of(context).signIn)),
-      body: SingleChildScrollView(
-        padding: const EdgeInsets.symmetric(
-          vertical: verticalMargin,
-          horizontal: horizontalMargin,
-        ),
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.start,
-          crossAxisAlignment: CrossAxisAlignment.center,
-          children: <Widget>[
-            LoginFormField(
-              hintText: S.of(context).usernameHint,
-              prefixIcon: Icons.person,
-              controller: _usernameController,
-              textInputAction: TextInputAction.next,
-              autofocus: true,
-              focusNode: _usernameFocusNode,
+      body: Container(
+        width: double.infinity,
+        height: double.infinity,
+        decoration: BoxDecoration(
+            image: DecorationImage(
+          image: AssetImage(Util.assetImage('bg.jpg')),
+          fit: BoxFit.fitHeight
+        )),
+        child: Align(
+          alignment: const Alignment(1, -0.5),
+          child: SingleChildScrollView(
+            padding: const EdgeInsets.symmetric(
+              vertical: verticalMargin,
+              horizontal: horizontalMargin,
             ),
-            LoginFormField(
-              hintText: S.of(context).passwordHint,
-              prefixIcon: Icons.password,
-              controller: _passwordController,
-              obscureText: true,
-              visibly: true,
-              textInputAction: TextInputAction.done,
-              focusNode: _passwordFocusNode,
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.start,
+              crossAxisAlignment: CrossAxisAlignment.center,
+              children: <Widget>[
+                // Image(
+                //   image: AssetImage(Util.assetImage('pixelbear.gif')),
+                //   fit: BoxFit.cover,
+                //   height: 200,
+                //   width: 200,
+                //   // color: Colors.white,
+                // ),
+                const SpaceDivider(height: verticalMargin),
+                LoginFormField(
+                  hintText: S.of(context).usernameHint,
+                  prefixIcon: Icons.person,
+                  controller: _usernameController,
+                  textInputAction: TextInputAction.next,
+                  autofocus: true,
+                  focusNode: _usernameFocusNode,
+                ),
+                LoginFormField(
+                  hintText: S.of(context).passwordHint,
+                  prefixIcon: Icons.password,
+                  controller: _passwordController,
+                  obscureText: true,
+                  visibly: true,
+                  textInputAction: TextInputAction.done,
+                  focusNode: _passwordFocusNode,
+                ),
+                const SpaceDivider(height: dividerMediumSize),
+                _buildButton(context),
+                const SpaceDivider(height: dividerLargeSize),
+              ],
             ),
-            const SpaceDivider(height: dividerMediumSize),
-            _buildButton(context),
-            const SpaceDivider(height: dividerLargeSize),
-          ],
+          ),
         ),
       ),
+
       // ),
     );
   }
