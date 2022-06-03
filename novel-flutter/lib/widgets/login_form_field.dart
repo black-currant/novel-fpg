@@ -128,36 +128,54 @@ class LoginFormFieldSuffixIcon extends StatelessWidget {
     return Row(
       mainAxisSize: MainAxisSize.min,
       mainAxisAlignment: MainAxisAlignment.end,
-      children: visibly ? _password(theme) : _normal(theme),
-    );
-  }
-
-  List<Widget> _password(ThemeData theme) {
-    return [
-      Offstage(
-        offstage: !obscureText,
-        child: GestureDetector(
-          onTap: () {
-            obscureNotifier.value = !obscureNotifier.value;
-          },
-          child: ValueListenableBuilder(
-            valueListenable: obscureNotifier,
-            builder: (BuildContext context, bool value, Widget? child) => Icon(
-              value ? CupertinoIcons.eye_slash : CupertinoIcons.eye,
-              color: value ? theme.hintColor : theme.colorScheme.secondary,
+      // children: visibly ? _password(theme) : _normal(theme),
+      children: [
+        Offstage(
+          offstage: !obscureText,
+          child: GestureDetector(
+            onTap: () {
+              obscureNotifier.value = !obscureNotifier.value;
+            },
+            child: ValueListenableBuilder(
+              valueListenable: obscureNotifier,
+              builder: (BuildContext context, bool value, Widget? child) => Icon(
+                value ? CupertinoIcons.eye_slash : CupertinoIcons.eye,
+                color: value ? theme.hintColor : theme.colorScheme.secondary,
+              ),
             ),
           ),
         ),
-      ),
-      LoginFormFieldClearIcon(controller),
-    ];
+        LoginFormFieldClearIcon(controller),
+      ],
+    );
   }
 
-  List<Widget> _normal(ThemeData theme) {
-    return [
-      LoginFormFieldClearIcon(controller),
-    ];
-  }
+  // List<Widget> _password(ThemeData theme) {
+  //   return [
+  //     Offstage(
+  //       offstage: !obscureText,
+  //       child: GestureDetector(
+  //         onTap: () {
+  //           obscureNotifier.value = !obscureNotifier.value;
+  //         },
+  //         child: ValueListenableBuilder(
+  //           valueListenable: obscureNotifier,
+  //           builder: (BuildContext context, bool value, Widget? child) => Icon(
+  //             value ? CupertinoIcons.eye_slash : CupertinoIcons.eye,
+  //             color: value ? theme.hintColor : theme.colorScheme.secondary,
+  //           ),
+  //         ),
+  //       ),
+  //     ),
+  //     LoginFormFieldClearIcon(controller),
+  //   ];
+  // }
+
+  // List<Widget> _normal(ThemeData theme) {
+  //   return [
+  //     LoginFormFieldClearIcon(controller),
+  //   ];
+  // }
 }
 
 /// 清空图标
