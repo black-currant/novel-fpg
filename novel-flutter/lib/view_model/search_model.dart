@@ -1,13 +1,14 @@
 import 'dart:async';
 
-import 'package:novel_flutter/app/server_api.dart';
-import 'package:novel_flutter/model/search.dart';
-import 'package:novel_flutter/provider/view_state_list_model.dart';
-import 'package:novel_flutter/provider/view_state_refresh_list_model.dart';
 import 'package:collection/collection.dart';
 import 'package:flutter/foundation.dart';
 import 'package:html/parser.dart' as html;
 import 'package:localstorage/localstorage.dart';
+import 'package:novel_flutter/app/server_api.dart';
+import 'package:novel_flutter/model/book.dart';
+import 'package:novel_flutter/model/search.dart';
+import 'package:novel_flutter/provider/view_state_list_model.dart';
+import 'package:novel_flutter/provider/view_state_refresh_list_model.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 const String kLocalStorageSearch = 'kLocalStorageSearch';
@@ -21,8 +22,8 @@ class SearchHotKeyModel extends ViewStateListModel {
     LocalStorage localStorage = LocalStorage(kLocalStorageSearch);
 //    localStorage.deleteItem(keySearchHotList);//测试没有缓存
     await localStorage.ready;
-    List localList =
-        (localStorage.getItem(kSearchHotList) ?? []).map<SearchHotKey>((item) {
+    List localList = (localStorage.getItem(kSearchHotList) ?? <SearchHotKey>[])
+        .map<SearchHotKey>((item) {
       return SearchHotKey.fromMap(item);
     }).toList();
 
@@ -79,23 +80,23 @@ class SearchHistoryModel extends ViewStateListModel<String> {
 }
 
 /// 搜索结果
-class SearchResultModel extends ViewStateRefreshListModel {
+class SearchResultModel extends ViewStateRefreshListModel<Book> {
   final String keyword;
   final SearchHistoryModel searchHistoryModel;
 
   SearchResultModel({required this.keyword, required this.searchHistoryModel});
 
   @override
-  Future<List> loadData({required int pageNum}) async {
+  Future<List<Book>> loadData({required int pageNum}) async {
     if (keyword.isEmpty) return [];
     searchHistoryModel.addHistory(keyword);
-    var data =
+    List<Book> data =
         await serverAPI.searchResult(keyword: keyword, pageIndex: pageNum);
 
     /// 去HTML标签
-    data.forEach((element) {
+    for (var element in data) {
       element.intro = html.parse(element.intro).body!.text;
-    });
+    }
     return data;
   }
 }

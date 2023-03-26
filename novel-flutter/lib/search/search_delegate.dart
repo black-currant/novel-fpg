@@ -1,8 +1,8 @@
+import 'package:flutter/material.dart';
 import 'package:novel_flutter/generated/l10n.dart';
 import 'package:novel_flutter/search/search_results.dart';
 import 'package:novel_flutter/search/search_suggestions.dart';
 import 'package:novel_flutter/view_model/search_model.dart';
-import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
 /// 应用内搜索代理
@@ -21,9 +21,21 @@ class MySearchDelegate extends SearchDelegate {
   ThemeData appBarTheme(BuildContext context) {
     return super.appBarTheme(context).copyWith(
         primaryColor: Theme.of(context).primaryColor,
-        textTheme: const TextTheme(
-          headline6: TextStyle(fontSize: 16, color: Colors.black),
-        ),
+        textTheme: ThemeData.light().textTheme.copyWith(
+              headline6: TextStyle(fontSize: 16, color: Colors.black),
+              subtitle1: ThemeData.light().textTheme.subtitle1!.copyWith(
+                    color: Colors.black,
+                  ),
+              subtitle2: ThemeData.light().textTheme.subtitle2!.copyWith(
+                    color: Colors.black,
+                  ),
+              caption: ThemeData.light().textTheme.caption!.copyWith(
+                    color: Colors.black,
+                  ),
+              button: ThemeData.light().textTheme.button!.copyWith(
+                    color: Colors.black,
+                  ),
+            ),
         inputDecorationTheme: const InputDecorationTheme(
           hintStyle: TextStyle(fontSize: 16),
           prefixStyle: TextStyle(),

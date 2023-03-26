@@ -1,6 +1,8 @@
 import 'dart:async';
 import 'dart:io';
 
+import 'package:dio/dio.dart';
+import 'package:flutter/material.dart';
 import 'package:novel_flutter/app/config.dart';
 import 'package:novel_flutter/app/constant.dart';
 import 'package:novel_flutter/app/http_client.dart';
@@ -16,8 +18,6 @@ import 'package:novel_flutter/model/user.dart';
 import 'package:novel_flutter/model/version.dart';
 import 'package:novel_flutter/utils/util.dart';
 import 'package:novel_flutter/view_model/user_model.dart';
-import 'package:dio/dio.dart';
-import 'package:flutter/material.dart';
 
 /// 缓存接口名单
 const cacheList = [
@@ -308,7 +308,7 @@ class ServerAPI {
         originWord.add('${book.author}');
         double weight = Util.cosine(originWord, targetWord);
         debugPrint('book ${book.title}, weight $weight');
-        book.weight = weight as int?;
+        book.weight = weight.toInt();
       }
       books.sort((left, right) => right.weight!.compareTo(left.weight!));
     }

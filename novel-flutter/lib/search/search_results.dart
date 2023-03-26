@@ -1,3 +1,4 @@
+import 'package:flutter/material.dart';
 import 'package:novel_flutter/app/dimens.dart';
 import 'package:novel_flutter/app/styles.dart';
 import 'package:novel_flutter/bookstore/book_item_medium.dart';
@@ -6,7 +7,6 @@ import 'package:novel_flutter/provider/view_state_widget.dart';
 import 'package:novel_flutter/view_model/search_model.dart';
 import 'package:novel_flutter/widgets/refresher_footer.dart';
 import 'package:novel_flutter/widgets/shimmer.dart';
-import 'package:flutter/material.dart';
 import 'package:pull_to_refresh/pull_to_refresh.dart';
 
 /// 搜索结果页
@@ -66,9 +66,8 @@ class SearchResultsPage extends StatelessWidget {
             shrinkWrap: true,
             itemCount: model.list.length,
             itemBuilder: (context, index) {
-              return BookItemMedium(
-                item: model.list[index],
-              );
+              final item = model.list[index];
+              return BookItemMedium(item: item);
             },
           ),
         );

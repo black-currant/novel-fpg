@@ -9,7 +9,7 @@
 - Create
 
 ```
-amlzq % flutter create --org com.black_currant --platforms=android,ios -a java -i objc ~/novel-fpg/novel_flutter
+~ % flutter create --org com.black_currant --platforms=android,ios -a java -i objc ~/novel-fpg/novel_flutter
 Creating project novel-fpg/novel_flutter...
   novel-fpg/novel_flutter/test/widget_test.dart (created)
   novel-fpg/novel_flutter/pubspec.yaml (created)
@@ -94,5 +94,5 @@ In order to run your application, type:
 
 Your application code is in novel-fpg/novel_flutter/lib/main.dart.
 
-amlzq %
+~ %
 ```

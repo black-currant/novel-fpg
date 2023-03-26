@@ -1,14 +1,14 @@
 import 'dart:math';
 
+import 'package:extended_image/extended_image.dart';
+import 'package:flutter/material.dart';
 import 'package:novel_flutter/app/dimens.dart';
 import 'package:novel_flutter/app/routes.dart';
 import 'package:novel_flutter/model/book.dart';
 import 'package:novel_flutter/utils/util.dart';
-import 'package:novel_flutter/widgets/space_divider.dart';
 import 'package:novel_flutter/widgets/item_button.dart';
 import 'package:novel_flutter/widgets/skeleton.dart';
-import 'package:extended_image/extended_image.dart';
-import 'package:flutter/material.dart';
+import 'package:novel_flutter/widgets/space_divider.dart';
 
 /// 书籍项视图
 /// 中号视图，水平显示
